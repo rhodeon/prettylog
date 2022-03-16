@@ -1,3 +1,4 @@
+// Package prettylog provides functions for logging info and errors in distinguished colours.
 package prettylog
 
 import (
