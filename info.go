@@ -3,9 +3,9 @@ package prettylog
 
 import (
 	"fmt"
+	"github/rhodeon.com/prettylog/colors"
 	"log"
 	"os"
-	"prettylog/colors"
 )
 
 // infoLogger is a logger which prints message to standard output.

@@ -2,9 +2,9 @@ package prettylog
 
 import (
 	"fmt"
+	"github/rhodeon.com/prettylog/colors"
 	"log"
 	"os"
-	"prettylog/colors"
 )
 
 // errorLogger is a Logger which prints message to standard error.
