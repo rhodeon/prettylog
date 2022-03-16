@@ -1,3 +1,3 @@
-module github.com/rhodeon.com/prettylog
+module github.com/rhodeon/prettylog
 
 go 1.17
