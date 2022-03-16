@@ -13,7 +13,7 @@ import (
 var infoLogger = log.New(os.Stdout, "INFO:\t", log.Ldate|log.Ltime)
 
 // colorizeInfo prints the info log and resets text colour afterwards.
-func colorizeInfo(logInfo func(), info ...interface{}) {
+func colorizeInfo(logInfo func()) {
 	fmt.Fprint(os.Stdout, colors.Yellow)
 	logInfo()
 	fmt.Fprint(os.Stdout, colors.Reset)
@@ -23,7 +23,7 @@ func colorizeInfo(logInfo func(), info ...interface{}) {
 func Info(info ...interface{}) {
 	colorizeInfo(func() {
 		infoLogger.Print(info...)
-	}, info...)
+	})
 }
 
 // InfoF is equivalent to fmt.Printf.
@@ -34,7 +34,7 @@ func InfoF(format string, info ...interface{}) {
 }
 
 // InfoLn is equivalent to fmt.Println.
-func InfoLn(format string, info ...interface{}) {
+func InfoLn(info ...interface{}) {
 	colorizeInfo(func() {
 		infoLogger.Println(info...)
 	})

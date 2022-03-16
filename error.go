@@ -12,7 +12,7 @@ import (
 var errorLogger = log.New(os.Stderr, "ERROR:\t", log.Ldate|log.Ltime|log.Lshortfile)
 
 // colorizeError prints the error log and resets text colour afterwards.
-func colorizeError(logError func(), error ...interface{}) {
+func colorizeError(logError func()) {
 	fmt.Fprint(os.Stderr, colors.Red)
 	logError()
 	fmt.Fprint(os.Stderr, colors.Reset)
@@ -22,8 +22,7 @@ func colorizeError(logError func(), error ...interface{}) {
 func Error(error ...interface{}) {
 	colorizeError(func() {
 		errorLogger.Print(error...)
-	},
-	)
+	})
 }
 
 // ErrorF is equivalent to fmt.PrintF.
