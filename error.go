@@ -2,7 +2,7 @@ package prettylog
 
 import (
 	"fmt"
-	"github/rhodeon.com/prettylog/colors"
+	"github.com/rhodeon.com/prettylog/colors"
 	"log"
 	"os"
 )
